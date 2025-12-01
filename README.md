@@ -31,3 +31,13 @@ Para gerar certificados HTTPS, execute:
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout nginx/ssl/server.key -out nginx/ssl/server.crt
 email: admin@example.com
 senha: 123
+
+testes 
+curl -X POST http://localhost:3001/api/neos \
+  -H "Authorization: Bearer SEU_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{"name":"<script>alert(1)</script>","date":"2025-01-01","distanceKm":1000,"isHazardous":true,"material":"rocha"}'
+
+curl -X POST http://localhost:3001/api/login \
+  -H "Content-Type: application/json" \
+  -d '{"email":{"$ne":""},"password":{"$ne":""}}'
