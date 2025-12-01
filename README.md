@@ -23,7 +23,7 @@ Todo o tráfego passa por Nginx com HTTPS habilitado via certificado self-signed
 ## Usuário padrão
 O backend cria automaticamente:
 
-
+email: admin@example.com
 - Senha: `123`
 
 As rotas de NEOs exigem um token JWT obtido via `POST /api/login`.
